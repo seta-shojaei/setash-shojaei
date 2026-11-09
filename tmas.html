@@ -1,0 +1,353 @@
+																																																																																																																																																																																																																																																																							<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تماس با ما</title>
+<style>
+	@charset "utf-8";
+html {
+    background-color: #eef1f7; /* تغییر: زمینه صفحه */
+}
+body{
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: 14px;
+	font-style: normal;
+	direction: rtl;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+    box-sizing: border-box;
+	width: auto;                 /* به‌جای 96% */
+	margin: 20px 320px 20px 20px;
+}
+.header{
+	width: 100%;
+	height: 260px;
+	background-color: #14284b; /* جدید */
+	background-image:url("galleri/banner-tmas.png"); /* تغییر: بنر جدید */
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+    overflow: hidden;
+	margin-bottom: 10px;
+	box-shadow: 0 5px 25px rgba(20, 40, 75, 0.20);
+}
+.main{
+	direction: rtl;
+	width: 100%;
+	margin: 0 auto 10px;
+	display: flex;
+	align-items: flex-start;
+    flex-shrink: 0;
+	gap: 10px;
+}
+.content{
+	background-color: #ffffff; /* تغییر: زمینه سفید */
+	width:100%;
+	min-height: 700px;
+    height: auto;
+    overflow-wrap: break-word;
+	float: left;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: justify;
+	font-size: 24px;
+	line-height: 2; /* جدید */
+	color: #1f3354; /* تغییر: متن سورمه‌ای */
+	border: 2px solid #dcbc82; /* جدید: حاشیه طلایی */
+	border-radius: 30px;
+	box-shadow: 0 5px 25px rgba(20, 40, 75, 0.20);
+}
+
+/* جدید: تیترها زرشکی با خط طلایی */
+.content h3{
+    color: #7a1230;
+    font-size: 26px;
+    font-weight: 700;
+
+    background-color: #f7f1e6; /* زرشکی خیلی کمرنگ */
+
+    margin: 28px 0 12px;
+    padding: 13px 20px;
+
+    border-right: 5px solid #A13A55;
+    border-radius: 0 6px 6px 0;
+
+    text-align: right;
+    box-sizing: border-box;
+
+    box-shadow: 0 2px 5px rgba(20, 40, 75, 0.08);
+}
+
+.content h3:first-child{
+    margin-top: 8px;
+}
+
+.content h3:first-child{
+	margin-top: 8px;
+}
+
+.menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 100vh;
+	background: #1a2540;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	z-index: 1000;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.menu-title{
+	margin: 0 0 20px;
+	padding: 0 0 25px;
+	text-align: center;
+	color: #c9a04e;
+	font-size: 38px;
+	font-weight: 900;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+.menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu li{
+	margin: 0 0 6px;
+}
+.menu a:link,
+.menu a:visited{
+	display: block;
+	padding: 24px 20px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ffffff;
+	text-align:center;          /* راست‌چین مثل نمونه */
+	text-decoration: none;
+	background: none;
+	border: none;
+	border-radius: 12px;
+	transition: background-color .2s, color .2s;
+}
+.menu a::after{
+	content: none;              /* پیکان قبلی حذف شود */
+}
+.menu a:hover,
+.menu a:focus-visible,
+.menu a.active{
+	background-color: #5c1a2b;  /* زرشکی تیره */
+	color: #c9a04e;             /* متن طلایی */
+}
+.footer{
+	width: 100%;
+	height: 100px;
+	margin: 0;
+	flex-shrink: 0;          /* جلوی کوچک شدن فوتر را می‌گیرد */
+	background-image: url("footer-5.png");
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+	box-shadow: 0 5px 25px rgba(20, 40, 75, 0.20);
+}
+ul{
+	list-style:none;
+	padding: 0 20px;
+}
+li{
+	margin-top: 20px;
+}
+a:link,a:visited{
+	background-image: none;
+	background-color: #ffffff; /* تغییر */
+	color: #1f3354;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 12px 0;
+	display: block;
+	text-decoration: none;
+	border-radius: 999px;
+	text-align: center;
+	transition: .2s;
+}
+a:hover{
+	background-color: #7a1230; /* تغییر: زرشکی */
+	color: #ffffff;
+}
+/* گالری تصاویر */
+.gallery-section{
+	margin: 30px 0;
+}
+.gallery-section h4{
+	margin: 0 0 10px;
+	padding: 8px 18px;
+	display: inline-block;
+	background-color: #7a1230; /* تغییر: زرشکی */
+	color: #ffffff;
+	font-size: 18px;
+	border-radius: 999px;
+}
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 16px;
+	margin: 20px 0;
+}
+.gallery figure{
+	margin: 0;
+	background-color: #ffffff; /* تغییر */
+	border: 1.5px solid #dcbc82; /* جدید */
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 4px 14px rgba(20, 40, 75, 0.15);
+}
+.gallery img{
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+}
+.gallery figcaption{
+	padding: 10px 14px;
+	font-size: 15px;
+	text-align: center;
+	color: #1f3354;
+}
+/* لینک‌های داخل متن: کادر مستطیلی زرشکی */
+.content a:link,
+.content a:visited{
+	display: inline-block;
+	background-color: #7a1230;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 6px 18px;
+	margin: 2px 4px;
+	border-radius: 6px;
+	text-decoration: none;
+	text-align: center;
+	transition: background-color .2s;
+}
+.content a:hover{
+	background-color: #a13a55;
+	color: #ffffff;
+}
+
+/* لیست‌ها و پاراگراف‌های داخل متن */
+.content ul{
+	padding: 0 30px 0 0;
+	list-style: disc;
+}
+.content li{
+	margin-top: 8px;
+}
+.content p{
+	margin: 0 0 14px;
+}
+	/* نسخه موبایل و تبلت */
+@media (max-width: 900px){
+	body{
+		margin: 10px;
+	}
+	.header{
+		height: 140px;
+		border-radius: 20px;
+	}
+	.main{
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.menu{
+		order: -1;               /* منو بالای محتوا */
+		position: static;
+		width: 100%;
+		height: auto;
+		padding: 15px;
+		border-radius: 20px;
+	}
+	.menu-title,
+	.content .menu-title{
+		font-size: 22px;
+		padding-bottom: 12px;
+	}
+	.menu a:link,
+	.menu a:visited{
+		font-size: 18px;
+		padding: 12px;
+	}
+	.content{
+		padding: 15px;
+		font-size: 17px;
+		min-height: 0;
+		border-radius: 20px;
+	}
+	.content h3{
+		font-size: 19px;
+		padding: 10px 14px;
+	}
+	.content a:link,
+	.content a:visited{
+		font-size: 16px;
+	}
+	.footer{
+		height: 60px;
+		border-radius: 20px;
+	}
+}
+</style>
+</head>
+
+<body>
+	<div class="header"></div>
+	
+	<div class="main">
+		<div class="content">
+			<h3>تماس با ما</h3>
+<p>
+برای دریافت اطلاعات بیشتر درباره‌ی رشته‌ها، شرایط ثبت‌نام و برنامه‌ی هنرستان، می‌توانید با ما در ارتباط باشید. خوشحال می‌شویم به سؤال‌های شما پاسخ دهیم.
+</p>
+
+<h3>اطلاعات تماس</h3>
+<p>
+<strong>نام:</strong> هنرستان دخترانه دولتی حیدرعلی حاتمی<br>
+<strong>📍نشانی:</strong> استان اصفهان، شهرستان ورزنه، بن‌رود، امام خمینی، کوچه بیمارستان، خیابان ۱۷ شهریور، پلاک ۵۵<br>
+<strong>☎️تلفن:</strong> <a href="tel:03146482251">۰۳۱۴۶۴۸۲۲۵۱</a><br>
+	<strong>⏰ساعت پاسخگویی:</strong>از ساعت 7 الی 14
+</p>
+<!-- وقتی ایمیل آماده شد: <strong>ایمیل:</strong> <a href="mailto:آدرس-ایمیل">آدرس-ایمیل</a> -->
+
+<h3>پیش از تماس</h3>
+<ul>
+  <li>صفحه‌ی <a href="reshteh.html">معرفی رشته‌ها</a> را ببینید.</li>
+  <li>سؤال‌هایتان را از قبل یادداشت کنید.</li>
+  <li>اگر برای ثبت‌نام تماس می‌گیرید، پایه‌ی تحصیلی و رشته‌ی مورد نظر را در نظر داشته باشید.</li>
+</ul>
+
+<h3>چطور به ما برسید؟</h3>
+<p>
+هنرستان در بن‌رود، خیابان امام خمینی، کوچه‌ی بیمارستان، خیابان ۱۷ شهریور قرار دارد. اگر مسیر را بلد نیستید، هنگام تماس تلفنی راهنمایی می‌کنیم.
+</p>
+
+		</div>
+		<div class="menu">
+			<h1 class="menu-title">منوی اصلی</h1>
+			<ul>
+				<li> <a href="index.html">صفحه اصلی</a></li>
+				<li> <a href="moarefi.html">درباره هنرستان</a></li>
+				<li> <a href="reshteh.html">رشته های تحصیلی</a></li>
+				<li><a href="galeri.html">گالری تصاویر</a></li>
+				<li><a href="amozesh.html">آموزش</a></li>
+				<li><a href="tmas.html">تماس با ما</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+	
+	</div>
+</body>
+</html>

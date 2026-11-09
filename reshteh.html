@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معرفی رشته های تحصیلی</title>
+<style>
+	@charset "utf-8";
+html {
+    background-color: #eef1f7; /* تغییر: زمینه صفحه */
+}
+body{
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-size: 14px;
+	font-style: normal;
+	direction: rtl;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+    box-sizing: border-box;
+	width: auto;                 /* به‌جای 96% */
+	margin: 20px 320px 20px 20px;
+}
+.header{
+	width: 100%;
+	height: 260px;
+	background-color: #14284b; /* جدید */
+	background-image:url("galleri/banner-reshteh.png"); /* تغییر: بنر جدید */
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+    overflow: hidden;
+	margin-bottom: 10px;
+	box-shadow: 0 5px 25px rgba(20, 40, 75, 0.20);
+}
+.main{
+	direction: rtl;
+	width: 100%;
+	margin: 0 auto 10px;
+	display: flex;
+	align-items: flex-start;
+    flex-shrink: 0;
+	gap: 10px;
+}
+.content{
+	background-color: #ffffff; /* تغییر: زمینه سفید */
+	width:100%;
+	min-height: 700px;
+    height: auto;
+    overflow-wrap: break-word;
+	float: left;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: justify;
+	font-size: 24px;
+	line-height: 2; /* جدید */
+	color: #1f3354; /* تغییر: متن سورمه‌ای */
+	border: 2px solid #dcbc82; /* جدید: حاشیه طلایی */
+	border-radius: 30px;
+	box-shadow: 0 5px 25px rgba(20, 40, 75, 0.20);
+}
+
+/* جدید: تیترها زرشکی با خط طلایی */
+.content h3{
+    color: #7a1230;
+    font-size: 26px;
+    font-weight: 700;
+
+    background-color: #f7f1e6; /* زرشکی خیلی کمرنگ */
+
+    margin: 28px 0 12px;
+    padding: 13px 20px;
+
+    border-right: 5px solid #A13A55;
+    border-radius: 0 6px 6px 0;
+
+    text-align: right;
+    box-sizing: border-box;
+
+    box-shadow: 0 2px 5px rgba(20, 40, 75, 0.08);
+}
+
+.content h3:first-child{
+    margin-top: 8px;
+}
+
+.content h3:first-child{
+	margin-top: 8px;
+}
+
+.menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 100vh;
+	background: #1a2540;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	z-index: 1000;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.menu-title{
+	margin: 0 0 20px;
+	padding: 0 0 25px;
+	text-align: center;
+	color: #c9a04e;
+	font-size: 38px;
+	font-weight: 900;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+.menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu li{
+	margin: 0 0 6px;
+}
+.menu a:link,
+.menu a:visited{
+	display: block;
+	padding: 24px 20px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ffffff;
+	text-align:center;          /* راست‌چین مثل نمونه */
+	text-decoration: none;
+	background: none;
+	border: none;
+	border-radius: 12px;
+	transition: background-color .2s, color .2s;
+}
+.menu a::after{
+	content: none;              /* پیکان قبلی حذف شود */
+}
+.menu a:hover,
+.menu a:focus-visible,
+.menu a.active{
+	background-color: #5c1a2b;  /* زرشکی تیره */
+	color: #c9a04e;             /* متن طلایی */
+}
+.footer{
+	width: 100%;
+	height: 100px;
+	margin: 0;
+	flex-shrink: 0;          /* جلوی کوچک شدن فوتر را می‌گیرد */
+	background-image: url("footer-5.png");
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+	box-shadow: 0 5px 25px rgba(20, 40, 75, 0.20);
+}
+ul{
+	list-style:none;
+	padding: 0 20px;
+}
+li{
+	margin-top: 20px;
+}
+a:link,a:visited{
+	background-image: none;
+	background-color: #ffffff; /* تغییر */
+	color: #1f3354;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 12px 0;
+	display: block;
+	text-decoration: none;
+	border-radius: 999px;
+	text-align: center;
+	transition: .2s;
+}
+a:hover{
+	background-color: #7a1230; /* تغییر: زرشکی */
+	color: #ffffff;
+}
+/* گالری تصاویر */
+.gallery-section{
+	margin: 30px 0;
+}
+.gallery-section h4{
+	margin: 0 0 10px;
+	padding: 8px 18px;
+	display: inline-block;
+	background-color: #7a1230; /* تغییر: زرشکی */
+	color: #ffffff;
+	font-size: 18px;
+	border-radius: 999px;
+}
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 16px;
+	margin: 20px 0;
+}
+.gallery figure{
+	margin: 0;
+	background-color: #ffffff; /* تغییر */
+	border: 1.5px solid #dcbc82; /* جدید */
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 4px 14px rgba(20, 40, 75, 0.15);
+}
+.gallery img{
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+}
+.gallery figcaption{
+	padding: 10px 14px;
+	font-size: 15px;
+	text-align: center;
+	color: #1f3354;
+}
+/* لینک‌های داخل متن: کادر مستطیلی زرشکی */
+.content a:link,
+.content a:visited{
+	display: inline-block;
+	background-color: #7a1230;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 6px 18px;
+	margin: 2px 4px;
+	border-radius: 6px;
+	text-decoration: none;
+	text-align: center;
+	transition: background-color .2s;
+}
+.content a:hover{
+	background-color: #a13a55;
+	color: #ffffff;
+}
+
+/* لیست‌ها و پاراگراف‌های داخل متن */
+.content ul{
+	padding: 0 30px 0 0;
+	list-style: disc;
+}
+.content li{
+	margin-top: 8px;
+}
+.content p{
+	margin: 0 0 14px;
+}
+	/* نسخه موبایل و تبلت */
+@media (max-width: 900px){
+	body{
+		margin: 10px;
+	}
+	.header{
+		height: 140px;
+		border-radius: 20px;
+	}
+	.main{
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.menu{
+		order: -1;               /* منو بالای محتوا */
+		position: static;
+		width: 100%;
+		height: auto;
+		padding: 15px;
+		border-radius: 20px;
+	}
+	.menu-title,
+	.content .menu-title{
+		font-size: 22px;
+		padding-bottom: 12px;
+	}
+	.menu a:link,
+	.menu a:visited{
+		font-size: 18px;
+		padding: 12px;
+	}
+	.content{
+		padding: 15px;
+		font-size: 17px;
+		min-height: 0;
+		border-radius: 20px;
+	}
+	.content h3{
+		font-size: 19px;
+		padding: 10px 14px;
+	}
+	.content a:link,
+	.content a:visited{
+		font-size: 16px;
+	}
+	.footer{
+		height: 60px;
+		border-radius: 20px;
+	}
+}
+</style>
+</head>
+
+<body>
+	<div class="header"></div>
+	
+	<div class="main">
+		<div class="content">
+			<h3>رشته‌های تحصیلی</h3>
+<p>
+در هنرستان دخترانه دولتی حیدرعلی حاتمی، هنرجویان در هفت رشته‌ی کاربردی آموزش می‌بینند. در همه‌ی این رشته‌ها، کار عملی بخش مهمی از آموزش است و هنرجو علاوه بر دانستن، یاد می‌گیرد که انجام بدهد.
+</p>
+<p>
+انتخاب رشته یکی از مهم‌ترین تصمیم‌های دوره‌ی تحصیل است. در ادامه با هر رشته، مهارت‌هایی که در آن یاد گرفته می‌شود، افرادی که برایشان مناسب است و مسیرهای پس از دوره آشنا می‌شوید.
+</p>
+
+<h3>کامپیوتر💻</h3>
+<p>
+امروز تقریباً هیچ شغلی بدون رایانه پیش نمی‌رود. رشته‌ی کامپیوتر به هنرجو یاد می‌دهد چطور با رایانه کار کند و از آن برای انجام کارهای واقعی استفاده کند.
+</p>
+<p>
+هنرجو با اصول کار با سیستم‌عامل، نرم‌افزارهای اداری و کاربردی، اینترنت و ابزارهای دیجیتال آشنا می‌شود، متن و جدول و ارائه تهیه می‌کند، فایل‌ها را مدیریت می‌کند و با اینترنت درست و ایمن کار می‌کند.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> کار با رایانه، دقت، منطق و حل مسئله، یادگیری ابزارهای جدید.</p>
+<p><strong>مناسب برای کسانی که:</strong> به کار با رایانه علاقه دارند، دنبال یادگیری مهارت‌های روز هستند و حوصله‌ی تمرین دارند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> کار در دفاتر و شرکت‌ها، کار آزاد و دورکاری، یا ادامه‌ی تحصیل در رشته‌های مرتبط.</p>
+
+<h3> نقشه‌کشی 📐</h3>
+<p>
+نقشه زبان مشترک صنعت و ساختمان است. هنرجوی این رشته یاد می‌گیرد چطور نقشه‌ی فنی را بخواند، ترسیم کند و اندازه‌ها و علامت‌ها را درست به کار ببرد.
+</p>
+<p>
+هنرجو با اصول ترسیم فنی، خط‌ها و مقیاس‌ها، رسم شکل‌ها و نما و مقطع آشنا می‌شود. تمرین زیاد و دقت در جزئیات، بخش اصلی یادگیری در این رشته است.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> دقت، حوصله، نظم، تصور فضایی و توانایی دیدن جزئیات.</p>
+<p><strong>مناسب برای کسانی که:</strong> دقیق هستند، به ترسیم علاقه دارند و دوست دارند کاری را قدم‌به‌قدم و با نظم انجام دهند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> همکاری با دفاتر فنی، مهندسی و ساختمانی، یا ادامه‌ی تحصیل در رشته‌های فنی.</p>
+
+<h3> گرافیک 🎨</h3>
+<p>
+گرافیک هنر انتقال پیام با تصویر است. هر پوستر، بنر، بسته‌بندی، آرم و کارت ویزیتی که می‌بینیم، کار یک طراح گرافیک است.
+</p>
+<p>
+هنرجو با اصول طراحی، رنگ، ترکیب‌بندی و حروف‌نگاری آشنا می‌شود و با ابزارهای طراحی کار می‌کند تا بتواند خلاقیتش را به شکل حرفه‌ای به کار ببرد.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> خلاقیت، حس زیبایی‌شناسی، شناخت رنگ، ایده‌پردازی و ارائه‌ی کار.</p>
+<p><strong>مناسب برای کسانی که:</strong> ذوق هنری دارند، به رنگ و طراحی علاقه‌مندند و دوست دارند ایده‌هایشان را به تصویر تبدیل کنند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> کار در چاپخانه‌ها و مراکز تبلیغاتی، کار آزاد، یا ادامه‌ی تحصیل در رشته‌های هنری.</p>
+
+<h3> طراحی و دوخت 🧵</h3>
+<p>
+لباس هم کاربرد دارد و هم هنر است. در این رشته، هنرجو از ایده تا لباس آماده را تجربه می‌کند: طرح می‌زند، اندازه می‌گیرد، الگو می‌کشد، پارچه را برش می‌دهد و می‌دوزد.
+</p>
+<p>
+هنرجو با انواع پارچه، ابزار دوخت، چرخ خیاطی و اصول الگوسازی آشنا می‌شود. این مهارت هم برای کار حرفه‌ای مفید است و هم در زندگی روزمره به کار می‌آید.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> مهارت دستی، دقت، خلاقیت، سلیقه و صبر.</p>
+<p><strong>مناسب برای کسانی که:</strong> به لباس و طراحی علاقه دارند، دست‌هایشان کار می‌کند و دوست دارند خودشان چیزی تولید کنند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> راه‌اندازی کارگاه یا خیاطی شخصی، کار در تولیدی‌ها، یا ادامه‌ی تحصیل.</p>
+
+<h3> تربیت کودک 🧸</h3>
+<p>
+سال‌های اول زندگی در شکل‌گیری شخصیت کودک بسیار مهم است. این رشته به هنرجو یاد می‌دهد چطور از کودکان مراقبت کند، آن‌ها را بشناسد و در رشد و یادگیری‌شان نقش داشته باشد.
+</p>
+<p>
+هنرجو با مراحل رشد کودک، نیازهای او، بازی و فعالیت‌های آموزشی، بهداشت و ایمنی و روش‌های برخورد صحیح با کودکان آشنا می‌شود. این دانش در کار حرفه‌ای و زندگی خانوادگی کاربرد دارد.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> صبر، مسئولیت‌پذیری، ارتباط مؤثر و خلاقیت در آموزش و بازی.</p>
+<p><strong>مناسب برای کسانی که:</strong> صبور و مهربان هستند و از کار با کودکان لذت می‌برند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> کار در مهدکودک و مراکز نگهداری کودک، یا ادامه‌ی تحصیل در حوزه‌ی آموزش و تربیت.</p>
+
+<h3> فتوگرافیک 📷</h3>
+<p>
+عکس می‌تواند لحظه‌ها را ثبت کند و داستان بگوید. در این رشته، هنرجو عکاسی را به‌صورت اصولی یاد می‌گیرد و می‌آموزد چطور با دوربین، نور و قاب‌بندی، عکسی تأثیرگذار بگیرد.
+</p>
+<p>
+هنرجو با کار با دوربین، تنظیمات اولیه، اصول نورپردازی، ترکیب‌بندی و آماده‌سازی عکس آشنا می‌شود. این رشته نگاه هنرجو را به دنیای اطرافش دقیق‌تر و هنرمندانه‌تر می‌کند.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> دید هنری، خلاقیت، دقت در جزئیات و کار با دوربین و ابزار دیجیتال.</p>
+<p><strong>مناسب برای کسانی که:</strong> به دیدن و ثبت لحظه‌ها علاقه دارند، نگاه هنری دارند و از کار با دوربین لذت می‌برند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> کار در آتلیه‌ها و مراسم، کار آزاد، یا ادامه‌ی تحصیل در رشته‌های هنری.</p>
+
+<h3> حسابداری 🧮</h3>
+<p>
+هر کسب‌وکاری، کوچک یا بزرگ، به کسی نیاز دارد که حساب‌وکتاب را مرتب نگه دارد. در این رشته، هنرجو یاد می‌گیرد چطور درآمد و هزینه را ثبت کند، اسناد مالی را بشناسد و گزارش مالی ساده تهیه کند.
+</p>
+<p>
+هنرجو با مفاهیم پایه‌ی حسابداری، دفترداری، ثبت اسناد و کار با نرم‌افزارهای حسابداری آشنا می‌شود. تمرین روی نمونه‌های واقعی باعث می‌شود با شرایط کار در محیط واقعی آشنا شود.
+</p>
+<p><strong>مهارت‌هایی که تقویت می‌شود:</strong> نظم، دقت در محاسبه، امانت‌داری و مدیریت اطلاعات مالی.</p>
+<p><strong>مناسب برای کسانی که:</strong> منظم و دقیق‌اند، با عدد و محاسبه راحت‌اند و دوست دارند کارها را مرتب نگه دارند.</p>
+<p><strong>مسیرهای ممکن پس از دوره:</strong> کار در شرکت‌ها و مغازه‌ها، دفترداری برای کسب‌وکارهای کوچک، یا ادامه‌ی تحصیل.</p>
+
+<h3>انتخاب رشته</h3>
+<p>
+اگر هنوز نمی‌دانید کدام رشته مناسب شماست، به این سه سؤال فکر کنید: چه کاری را بیشتر دوست دارم؟ در چه کاری بهتر هستم؟ دوست دارم در آینده چه کاری انجام بدهم؟
+</p>
+<p>
+برای مشاوره و راهنمایی با هنرستان تماس بگیرید: <a href="tel:03146482251">۰۳۱۴۶۴۸۲۲۵۱</a>
+</p>
+
+		</div>
+		<div class="menu">
+						<h1 class="menu-title">منوی اصلی</h1>
+
+			<ul>
+				<li> <a href="index.html">صفحه اصلی</a></li>
+				<li> <a href="moarefi.html">درباره هنرستان</a></li>
+				<li> <a href="reshteh.html">رشته های تحصیلی</a></li>
+				<li><a href="galeri.html">گالری تصاویر</a></li>
+				<li><a href="amozesh.html">آموزش</a></li>
+				<li><a href="tmas.html">تماس با ما</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		
+	</div>
+</body>
+</html>
+
